@@ -19,13 +19,6 @@ const getPosition = function () {
   });
 };
 
-// feels_like: 268.62
-// humidity: 92
-// pressure: 1006
-// temp: 272.71
-// temp_max: 275.03
-// temp_min: 270.32
-
 const displayData = function (weatherData) {
   let weatherIcon;
   container.style.opacity = 1;
@@ -48,11 +41,8 @@ const weather = async function (lat, lng) {
   );
   const weatherData = await whereAmI.json();
   loading.classList.remove('visible');
-  console.log(weatherData);
-  console.log(weatherData.name);
   displayData(weatherData);
 };
-// test();
 
 // Event listener to get users desired location
 form.addEventListener('submit', e => {
@@ -70,7 +60,6 @@ const getUserLocation = async function (city) {
       `https://geocode.xyz/${city}?json=1&auth=346201838981604841666x100650`
     );
     const inputTest2 = await inputTest.json();
-    console.log(inputTest2.standard);
     const html = ` <div class="cityName"><h2>${inputTest2.standard.city}, ${inputTest2.standard.countryname}</h2></div>`;
     container.innerHTML = '';
     container.insertAdjacentHTML('beforeend', html);
