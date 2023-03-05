@@ -77,5 +77,6 @@ const getUserLocation = async function (city) {
     weather(inputTest2.latt, inputTest2.longt);
   } catch (err) {
     alert('Sorry, cannot find a city with that name!');
+    loading.classList.remove('visible');
   }
 };
