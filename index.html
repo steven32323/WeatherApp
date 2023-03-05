@@ -5,12 +5,34 @@
     <script defer src="script.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/1026128bfe.js"
+      crossorigin="anonymous"
+    ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
   <body>
     <form action="submit" class="form">
-      <input type="text" name="city" id="city" />Enter your current location
+      <header class="header"><h1>Weather Forecast</h1></header>
+      <input type="text" name="city" id="city" />
+      <span class="city">Enter your current location</span>
+      <div class="loading">
+        <img src="/imgs/loading.gif" alt="Loading..." />
+      </div>
+      <div class="container">
+        <!-- <div class="cityName"><h2>Glasgow</h2></div>
+        <div class="currentTemp">265.5</div>
+        <div class="feelsLikeTemp">250.2</div>
+        <div class="maxTemp">295.5</div>
+        <div class="minTemp">215.5</div> -->
+      </div>
     </form>
+    <footer class="footer">
+      2023 Steven Smith
+      <a target="_blank" href="https://github.com/steven32323"
+        ><i class="fab fa-github"></i
+      ></a>
+    </footer>
   </body>
 </html>
